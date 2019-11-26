@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<p>Товары</p>
+{# {{ data }} #}
+{% for item in data %}
+    <li>
+        {{ item.product_name }}; данные: {{ item.data_order }};
+    </li>
+{% endfor%}
+
+<p>Самый покупаемый товар - товар который купили больше всего штук {{amount.amount__max}}</p>
+
+{% endblock %}

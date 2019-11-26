@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<p>Заказы</p>
+{% for item in order%}
+    <li>
+        Дата и время: {{ item.get_date }}, Номер заказа: {{ item.number }}, Сумма: {{ item.get_total_cost }} Товары: {{ item.get_all_products }}
+    </li>
+{% endfor%}
+
+{% endblock %}
