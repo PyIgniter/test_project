@@ -1,6 +1,8 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+<p>Количество обращений к БД {{ order_requests }}</p>
+
 <p>Заказы</p>
 {% for item in order%}
     <li>
